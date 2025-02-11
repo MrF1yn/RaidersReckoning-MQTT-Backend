@@ -1,1 +1,5 @@
-export type DatType = { bomb_id: number; level: number; completedTime: number };
+export type DataType = {
+  bomb_id: number;
+  level: number;
+  completedTime: number;
+};
