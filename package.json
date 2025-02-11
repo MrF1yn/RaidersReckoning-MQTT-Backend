@@ -14,7 +14,9 @@
     "mqtt": "^5.10.3"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.3",
     "@types/express": "^5.0.0",
+    "dotenv": "^16.4.7",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   }

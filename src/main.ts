@@ -1,17 +1,24 @@
+import dotenv from "dotenv";
 import express from "express";
-import { DatType } from "./type";
+import leaderboard from "./leaderboard";
+dotenv.config();
+
+if (!process.env.PORT) {
+  throw new Error("PORT is not set");
+}
+
+if (!process.env.MQTT_HOST) {
+  throw new Error("MQTT_HOST is not set");
+}
 
 const app = express();
-const currentData: DatType[] = [];
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello World!" });
 });
 
-app.get("/leaderboard", (req, res) => {
-  res.json(currentData);
-});
+app.use("/", leaderboard);
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
