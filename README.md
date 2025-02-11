@@ -3,8 +3,15 @@
 ## Get Started
 
 1. Clone the repository
-2. Install dependencies (using `npm install`)
-3. Run the project using `npm run dev`
+2. Create `.env.local` file in the root directory and add the following variables
+
+```bash
+PORT=3000 # Port to run the server on
+MQTT_BROKER_URL=mqtt://test.mosquitto.org # URL of MQTT Broker
+```
+
+3. Install dependencies (using `npm install`)
+4. Run the project using `npm run dev`
 
 ### Objective
 
