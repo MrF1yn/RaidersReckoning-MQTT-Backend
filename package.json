@@ -1,0 +1,19 @@
+{
+  "name": "iot-mqtt-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch ./src/main.ts"
+  },
+  "keywords": [],
+  "author": "JagTheFriend<JagTheFriend12@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
