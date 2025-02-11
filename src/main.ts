@@ -1,13 +1,17 @@
 import dotenv from "dotenv";
 import express from "express";
 import leaderboard from "./leaderboard";
-dotenv.config();
+dotenv.configDotenv({
+  path: ".env.local",
+});
+
+console.log(process.env.PORT);
 
 if (!process.env.PORT) {
   throw new Error("PORT is not set");
 }
 
-if (!process.env.MQTT_HOST) {
+if (!process.env.MQTT_BROKER_URL) {
   throw new Error("MQTT_HOST is not set");
 }
 
