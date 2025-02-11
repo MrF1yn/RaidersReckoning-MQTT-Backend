@@ -5,8 +5,6 @@ dotenv.configDotenv({
   path: ".env.local",
 });
 
-console.log(process.env.PORT);
-
 if (!process.env.PORT) {
   throw new Error("PORT is not set");
 }

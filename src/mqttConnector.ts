@@ -10,6 +10,5 @@ export function mqttConnect(callback: (data: string) => unknown) {
   client.on("message", (_topic, message) => {
     // message is Buffer
     callback(message.toString());
-    client.end();
   });
 }
