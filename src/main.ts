@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import leaderboard from "./leaderboard";
 dotenv.configDotenv({
-  path: ".env.local",
+  path: ".env",
 });
 
 if (!process.env.PORT) {

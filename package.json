@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/main.ts"
+    "build": "tsc",
+    "dev": "nodemon --files src/main.ts",
+    "start": "ts-node --files src/main.ts",
+    "serve": "node build/app.js"
   },
   "keywords": [],
   "author": "JagTheFriend<JagTheFriend12@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
-    "mqtt": "^5.10.3"
+    "mqtt": "^5.10.3",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.3",
