@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 import express from "express";
+
 import leaderboard from "./leaderboard";
+import cors, {CorsOptions} from "cors";
 dotenv.configDotenv({
   path: ".env",
 });
@@ -14,7 +16,11 @@ if (!process.env.MQTT_BROKER_URL) {
 }
 
 const app = express();
+const corsOptions: CorsOptions = {
+  origin: '*',
+};
 
+app.use(cors(corsOptions));
 app.get("/", (req, res) => {
   res.json({ message: "Hello World!" });
 });
